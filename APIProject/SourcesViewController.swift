@@ -24,6 +24,8 @@ class SourcesViewController: UITableViewController {
         
         print("something's happening")
         
+        DispatchQueue.global(qos: .userInitiated).async {
+            [unowned self] in
         if let url = URL(string: query)
         {
             print("passed url bit")
@@ -31,19 +33,14 @@ class SourcesViewController: UITableViewController {
             {
                 print("passed data bit")
                 let json = try! JSON(data: data)
-                /*if json["status"] == "ok"
-                {
-                    print("passed status bit")
-                    parse(json: json)
-                    return
-                }*/
                 
-                parse(json: json)
+                
+                self.parse(json: json)
                 return
             }
         }
-        loadError()
-        
+            self.loadError()
+        }
     }
 
 
@@ -57,16 +54,27 @@ class SourcesViewController: UITableViewController {
             let amiiboo = ["name":name, "key": key]
             amiibo.append(amiiboo)
         }
-        tableView.reloadData()
+        
+        DispatchQueue.main.async {
+            [unowned self] in
+            self.tableView.reloadData()
+        }
+        
     }
     
     
     func loadError() {
+        
+        DispatchQueue.main.async {
+            [unowned self] in
+        
         let alert = UIAlertController(title: "Loading Error", message: "There was a problem loading the news feed", preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
-        present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     
