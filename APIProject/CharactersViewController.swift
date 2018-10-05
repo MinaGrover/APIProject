@@ -53,10 +53,13 @@ class CharactersViewController: UITableViewController {
             let name = result["name"].stringValue
             let gameSeries = result["gameSeries"].stringValue
             let series = result["amiiboSeries"].stringValue
+            let type = result["type"].stringValue
             let imageURL = result["image"].stringValue
             
-            let amiiboo = ["name": name, "gameSeries": gameSeries, "amiiboSeries": series, "imageURL": imageURL]
-            chars.append(amiiboo)
+            let amiiboo = ["name": name, "gameSeries": gameSeries, "amiiboSeries": series,"type": type, "imageURL": imageURL]
+            
+            if type == "Figure"
+            {chars.append(amiiboo)}
             
             print("\(name), \(gameSeries), \(series),,,")
         }
