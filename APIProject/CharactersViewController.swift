@@ -22,7 +22,7 @@ class CharactersViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.title = "Characters in \(amiiboType["name"]!)"
-        let query = "http://www.amiiboapi.com/api/amiibo/?amiiboSeries=\(amiiboType["name"]!)"
+        let query = "http://www.amiiboapi.com/api/amiibo/?amiiboSeries=\(amiiboType["key"]!)"
         
         print("something's happening")
         
@@ -48,15 +48,17 @@ class CharactersViewController: UITableViewController {
     
     func parse(json: JSON)
     {
-        for result in json["amiiboType"].arrayValue
+        for result in json["amiibo"].arrayValue
         {
             let name = result["name"].stringValue
             let gameSeries = result["gameSeries"].stringValue
             let series = result["amiiboSeries"].stringValue
             let imageURL = result["image"].stringValue
             
-            let amiiboo = ["name":name, "gameSeries": gameSeries, "amiiboSeries": series, "imageURL": imageURL]
+            let amiiboo = ["name": name, "gameSeries": gameSeries, "amiiboSeries": series, "imageURL": imageURL]
             chars.append(amiiboo)
+            
+            print("\(name), \(gameSeries), \(series),,,")
         }
         
         DispatchQueue.main.async {
