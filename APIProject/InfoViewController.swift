@@ -41,6 +41,17 @@ class InfoViewController: UIViewController {
         itsGameSeries = char["gameSeries"]!
         itsURL = char["imageURL"]!
         
+        
+        
+        if let url = NSURL(string: itsURL)
+        {
+            if let data = NSData(contentsOf: url as URL)
+            {
+                charImageView.image = UIImage(data: data as Data)
+            }
+        }
+
+        
         // Do any additional setup after loading the view.
     }
     
