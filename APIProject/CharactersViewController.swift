@@ -24,16 +24,16 @@ class CharactersViewController: UITableViewController {
         self.title = "Characters in \(amiiboType["name"]!)"
         let query = "http://www.amiiboapi.com/api/amiibo/?amiiboSeries=\(amiiboType["key"]!)"
         
-        print("something's happening")
+        //print("something's happening")
         
         DispatchQueue.global(qos: .userInitiated).async {
             [unowned self] in
             if let url = URL(string: query)
             {
-                print("passed url bit")
+                //print("passed url bit")
                 if let data = try? Data(contentsOf: url)
                 {
-                    print("passed data bit")
+                    //print("passed data bit")
                     let json = try! JSON(data: data)
                     
                     
@@ -62,7 +62,7 @@ class CharactersViewController: UITableViewController {
             if type == "Figure"
             {chars.append(amiiboo)}
             
-            print("\(name), \(gameSeries), \(series),,,")
+            //print("\(name), \(gameSeries), \(series),,,")
         }
         
         DispatchQueue.main.async {

@@ -22,16 +22,16 @@ class SourcesViewController: UITableViewController {
         self.title = "Amiibo Series"
         let query = "http://www.amiiboapi.com/api/amiiboseries/"
         
-        print("something's happening")
+        //print("something's happening")
         
         DispatchQueue.global(qos: .userInitiated).async {
             [unowned self] in
         if let url = URL(string: query)
         {
-            print("passed url bit")
+            //print("passed url bit")
             if let data = try? Data(contentsOf: url)
             {
-                print("passed data bit")
+                //print("passed data bit")
                 let json = try! JSON(data: data)
                 
                 
