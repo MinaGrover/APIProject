@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C161B17B2167C526008AA370 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161B17A2167C526008AA370 /* CharactersViewController.swift */; };
+		C161B17D216BBDED008AA370 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161B17C216BBDED008AA370 /* InfoViewController.swift */; };
 		C17DB0F5216429FE00F87593 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB0F4216429FD00F87593 /* SwiftyJSON.swift */; };
 		C1C1B36F215E897100CCE0B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1B36E215E897100CCE0B9 /* AppDelegate.swift */; };
 		C1C1B371215E897100CCE0B9 /* SourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1B370215E897100CCE0B9 /* SourcesViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		C161B17A2167C526008AA370 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		C161B17C216BBDED008AA370 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		C17DB0F4216429FD00F87593 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		C1C1B36B215E897100CCE0B9 /* APIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C1B36E215E897100CCE0B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				C1C1B36E215E897100CCE0B9 /* AppDelegate.swift */,
 				C1C1B370215E897100CCE0B9 /* SourcesViewController.swift */,
 				C161B17A2167C526008AA370 /* CharactersViewController.swift */,
+				C161B17C216BBDED008AA370 /* InfoViewController.swift */,
 				C1C1B372215E897100CCE0B9 /* Main.storyboard */,
 				C1C1B375215E897800CCE0B9 /* Assets.xcassets */,
 				C1C1B377215E897800CCE0B9 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				C17DB0F5216429FE00F87593 /* SwiftyJSON.swift in Sources */,
 				C1C1B371215E897100CCE0B9 /* SourcesViewController.swift in Sources */,
 				C1C1B36F215E897100CCE0B9 /* AppDelegate.swift in Sources */,
+				C161B17D216BBDED008AA370 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

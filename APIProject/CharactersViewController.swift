@@ -55,8 +55,9 @@ class CharactersViewController: UITableViewController {
             let series = result["amiiboSeries"].stringValue
             let type = result["type"].stringValue
             let imageURL = result["image"].stringValue
+            let character = result["character"].stringValue
             
-            let amiiboo = ["name": name, "gameSeries": gameSeries, "amiiboSeries": series,"type": type, "imageURL": imageURL]
+            let amiiboo = ["name": name, "gameSeries": gameSeries, "amiiboSeries": series,"type": type, "imageURL": imageURL, "character": character]
             
             if type == "Figure"
             {chars.append(amiiboo)}
@@ -106,6 +107,13 @@ class CharactersViewController: UITableViewController {
     }
     
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! InfoViewController
+        let index = tableView.indexPathForSelectedRow?.row
+        dvc.char = chars[index!]
+        //dvc.apiKey = apiKey
+    }
     
     
     
