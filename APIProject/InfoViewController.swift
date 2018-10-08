@@ -30,10 +30,10 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        charNameLabel.text = char["name"]
-        itsCharNameLabel.text = char["character"]
-        itsAmiiboSeriesLabel.text = char["amiiboSeries"]
-        itsGameSeriesLabel.text = char["gameSeries"]
+        charNameLabel.text =  char["name"]!
+        itsCharNameLabel.text = "Charcter: " + char["character"]!
+        itsAmiiboSeriesLabel.text = "Amiibo Series: " + char["amiiboSeries"]!
+        itsGameSeriesLabel.text = "Game Series: " + char["gameSeries"]!
         
         charName = char["name"]!
         itsCharName = char["character"]!
